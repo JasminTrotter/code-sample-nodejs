@@ -77,7 +77,7 @@ exports.handler = (event) => {
           } else {
             data.Items.forEach(item => dataResult.push(item))
 
-            if (dataResult.length === 10) {
+            if (data.Items.length < 5) {
               resolve(dataResult)
             } else {
               const newParams = {
