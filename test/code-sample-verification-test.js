@@ -8,7 +8,7 @@ const readData = require('./../src/read-data');
 const writeData = require('./../src/write-data');
 
 describe('the code sample', function () {
-  this.timeout(10000);
+  this.timeout(100000);
 
   // This is the test that you want to pass
   it('saves data to DynamoDB and then it can be read', async function () {
@@ -37,8 +37,8 @@ describe('the code sample', function () {
     assert.deepEqual(queryResult[0], schoolStudent, 'Expected the query result to match what we saved');
   });
 
-  // TODO (extra credit) enable this test if you implement the GSI query in src/read-data.js
-  it.skip('(extra credit) can query for SchoolStudent records by studentLastName', async function () {
+  // T̶O̶D̶O̶ (extra credit) enable this test if you implement the GSI query in src/read-data.js
+  it('(extra credit) can query for SchoolStudent records by studentLastName', async function () {
     const schoolId = uuid();
     const studentId = uuid();
 
@@ -63,8 +63,8 @@ describe('the code sample', function () {
     assert.deepEqual(queryResult[0], schoolStudent, 'Expected the query result to match what we saved');
   });
 
-  // TODO uncomment this test if you implement retrieval of multiple pages of data
-  it.skip('returns all pages of data', async function () {
+  // T̶O̶D̶O̶ uncomment this test if you implement retrieval of multiple pages of data
+  it('returns all pages of data', async function () {
     let createdRecords = 0;
     const schoolId = uuid();
     while (createdRecords++ < 10) {
